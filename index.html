@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="icon" type="image/x-icon" href="media/film-solid.svg">
+    <title>Movie Database</title>
+</head>
+
+<body>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p>Add a New Movie</p><span><i class="uil uil-times"></i></span>
+                </header>
+                <form action="#">
+                    <div class="row title">
+                        <label>Title</label>
+                        <input id="title" type="text" required>
+                    </div>
+                    <div class="row cast">
+                        <label>Cast</label>
+                        <input id="cast" type="text" required>
+                    </div>
+                    <div class="row runtime">
+                        <label>Runtime</label>
+                        <input id="runtime" type="number" required>
+                    </div>
+                    <div class="row rating">
+                        <label>Rating</label>
+                        <input id="rating" step="0.01" type="number" required>
+                    </div>
+                    <div class="row year">
+                        <label>Year</label>
+                        <input id="year" type="number" required>
+                    </div>
+                    <div class="row plot">
+                        <label>Plot</label>
+                        <textarea id="plot" required></textarea>
+                    </div>
+                    <button type="submit" onclick="addNewMovie();">Add Movie</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <section id="movieTable">
+        <!-- data goes here -->
+        <h1>Movie Database</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th width="12%">Year</th>
+                    <th width="12%">Rating</th>
+                    <th width="12%">Runtime</th>
+                    <th width="12%">View/Edit</th>
+                    <th width="12%">Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableData"></tbody>
+        </table>
+        <button class="addMovieBtn">Add New Movie</button>
+    </section>
+    <!-- <footer>
+        <div class="footer-content">
+            <a href="https://github.com/rbrantley0414"><i class="uil uil-github"></i></a>
+            <i class="uil uil-instagram"></i>
+            <i class="uil uil-twitter"></i>
+            <a href="mailto:rbrantley0414@gmail.com"><i class="uil uil-envelope"></i></a>
+
+            <p>Rebecca Brantley &copy; 2023</p>
+        </div>
+    </footer> -->
+    <script src="movies.js"></script>
+</body>
+
+</html>
